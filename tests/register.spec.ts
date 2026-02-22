@@ -20,7 +20,7 @@ const registerationData:RegData[]  = parse(fileContent, {
 });
 
 for (const user of registerationData) {
-    test(`@register verify user is able to register ${user.firstName}`, async ({ page, baseURL }) => {
+    test(`@register @sanity verify user is able to register ${user.firstName}`, async ({ page, baseURL }) => {
     
         const loginPage = new LoginPage(page);
         await loginPage.gotoLoginPage(baseURL);
